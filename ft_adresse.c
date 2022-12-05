@@ -6,12 +6,13 @@
 /*   By: tedelin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:22:17 by tedelin           #+#    #+#             */
-/*   Updated: 2022/12/01 16:22:19 by tedelin          ###   ########.fr       */
+/*   Updated: 2022/12/02 20:08:42 by tedelin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
 int	ft_len(unsigned long p)

@@ -11,33 +11,12 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-static int	ft_nblen(unsigned int nb)
-{
-	int	len;
-
-	len = 1;
-	while (nb >= 10)
-	{
-		nb = nb / 10;
-		len++;
-	}
-	return (len);
-}
-
-static void	ft_put(unsigned int nb)
-{
-	if (nb >= 10)
-	{
-		ft_put(nb / 10);
-		ft_put(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
-}
+#include <unistd.h>
 
 int	ft_putunsnbr(unsigned int nb)
 {
-	ft_put(nb);
-	return (ft_nblen(nb));
+	if (nb >= 10)
+		return (ft_putunsnbr(nb / 10) + ft_putunsnbr(nb % 10));
+	else
+		return (ft_putchar(nb + '0'));
 }

@@ -17,14 +17,13 @@
 # include <stdarg.h>
 # include <stddef.h>
 
-int		ft_putchar(char c);
-int		ft_putstr(char *str);
-int		ft_putnbr(int n);
-int		l_hexa(int nb);
-int		ft_putunsnbr(unsigned int nb);
-size_t	ft_puthexamin(unsigned int nb);
-size_t	ft_puthexamaj(unsigned int nb);
 int		ft_adresse(unsigned long p);
+int		ft_putchar(char c);
+size_t	ft_puthexamaj(unsigned int nb);
+size_t	ft_puthexamin(unsigned int nb);
+int		ft_putnbr(int n);
+int		ft_putstr(char *str);
+int		ft_putunsnbr(unsigned int nb);
 int		ft_printf(const char *s, ...);
 
 #endif
