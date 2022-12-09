@@ -48,9 +48,9 @@ int	ft_display(va_list va_l, char c)
 	if (c == 'u')
 		count = ft_putunsnbr(va_arg(va_l, unsigned int));
 	if (c == 'x')
-		count = ft_puthexamin(va_arg(va_l, int));
+		count = ft_puthexamin(va_arg(va_l, unsigned int));
 	if (c == 'X')
-		count = ft_puthexamaj(va_arg(va_l, int));
+		count = ft_puthexamaj(va_arg(va_l, unsigned int));
 	if (c == '%')
 		count = ft_putchar('%');
 	return (count);
