@@ -6,7 +6,7 @@
 /*   By: tedelin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 01:26:39 by tedelin           #+#    #+#             */
-/*   Updated: 2022/11/30 01:26:41 by tedelin          ###   ########.fr       */
+/*   Updated: 2023/02/22 15:25:27 by tedelin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ int	ft_display(va_list va_l, char c)
 	if (c == 'u')
 		count = ft_putunsnbr(va_arg(va_l, unsigned int));
 	if (c == 'x')
-		count = ft_puthexamin(va_arg(va_l, unsigned int));
+		count = ft_puthexa(va_arg(va_l, unsigned int), 'a');
 	if (c == 'X')
-		count = ft_puthexamaj(va_arg(va_l, unsigned int));
+		count = ft_puthexa(va_arg(va_l, unsigned int), 'A');
 	if (c == '%')
 		count = ft_putchar('%');
 	return (count);

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_adresse.c                                       :+:      :+:    :+:   */
+/*   ft_pu.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tedelin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 16:22:17 by tedelin           #+#    #+#             */
-/*   Updated: 2022/12/02 20:08:42 by tedelin          ###   ########.fr       */
+/*   Created: 2023/02/22 15:37:34 by tedelin           #+#    #+#             */
+/*   Updated: 2023/02/22 15:48:06 by tedelin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
+
+int	ft_putunsnbr(unsigned int nb)
+{
+	if (nb >= 10)
+		return (ft_putunsnbr(nb / 10) + ft_putunsnbr(nb % 10));
+	else
+		return (ft_putchar(nb + '0'));
+}
 
 int	ft_len(unsigned long p)
 {
